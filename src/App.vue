@@ -1,5 +1,5 @@
 <template>
- <compHeader></compHeader>
+ <compHeader :studentProps="students"></compHeader>
  <compFooter></compFooter>
   
 </template>
@@ -10,10 +10,10 @@ import compFooter from './Components/Header_footer/Footer.vue';
 export default {
     data(){
         return{
-            name : "Rony",
-            age : 21
+            students : ['Rony','Jony','Kamrul']
         }
     },
+    
     components :{
         compHeader,
         compFooter,
