@@ -1,26 +1,18 @@
 <template>
- <compHeader :studentProps="students"></compHeader>
- <compFooter></compFooter>
-  
+    <div id="app">
+        <BookListOne></BookListOne>
+        <BookListTwo></BookListTwo>
+    </div>
 </template>
 
 <script>
-import compHeader from './Components/Header_footer/Header.vue';
-import compFooter from './Components/Header_footer/Footer.vue';
+import BookListOne from "./Components/Header_footer/BooklistOne"
+import BookListTwo from "./Components/Header_footer/BooklistTwo"
 export default {
-    data(){
-        return{
-            students : ['Rony','Jony','Kamrul']
-        }
-    },
     
-    components :{
-        compHeader,
-        compFooter,
-    },
+    components:{
+      BookListOne,
+      BookListTwo
+    }
 }
 </script>
-
-<style scoped>
-
-</style>

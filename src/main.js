@@ -1,9 +1,11 @@
 import { createApp, VueElement } from 'vue'
 import App from './App.vue'
+import {store} from './store/store'
 
 // import Header from './Components/Header_footer/Header'
 
-const app = createApp(App);
+createApp(App).use(store).mount('#app');
+
 
 // app.component('compHeader', Header);
-app.mount('#app');
+
