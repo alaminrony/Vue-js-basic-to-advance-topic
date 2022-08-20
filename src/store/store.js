@@ -1,5 +1,6 @@
 import { createStore } from "vuex";
 
+
 export const store = createStore({
   state: {
     books: [
@@ -13,11 +14,29 @@ export const store = createStore({
     saleBooks(state) {
       let saleBooks = state.books.map((book) => {
         return {
-          name: book.name,
-          price: book.price / 2,
+          name: `** ${book.name}**`,
+          price: book.price,
         };
       });
       return saleBooks;
     },
   },
+
+  mutations:{
+    reducePrice(state){
+        state.books.forEach((book)=>{
+            book.price = book.price - 1;
+        });
+    }
+  },
+  actions:{
+    // reducePrice({commit }){
+    //     commit('reducePrice');
+    // },
+    reducePrice ({ commit }) {
+      setTimeout(() => {
+        commit('reducePrice')
+      }, 1000)
+    }
+  }
 });

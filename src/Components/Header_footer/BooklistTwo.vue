@@ -13,9 +13,9 @@
 <script>
 export default {
     computed : {
-        books(){
-            return this.$store.state.books
-        },
+        // books(){
+        //     return this.$store.state.books
+        // },
         saleBooks(){
           return this.$store.getters.saleBooks;
         }

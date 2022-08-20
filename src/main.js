@@ -1,6 +1,7 @@
-import { createApp, VueElement } from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 import {store} from './store/store'
+
 
 // import Header from './Components/Header_footer/Header'
 
